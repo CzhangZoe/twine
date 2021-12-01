@@ -93,6 +93,13 @@ body, tw-story[tags~="phone1"] {
   background-position:center;
 }
 
+body, tw-story[tags~="cake"] {
+  background-image:url("https://czhangzoe.github.io/twine/images/cake.webp");
+  background-size: 850px;
+  background-repeat:repeat;
+  background-position:center;
+}
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 var audio = document.createElement('audio');
 audio.scr = 
@@ -137,12 +144,14 @@ It&#39;s your mom calling from your hometown.
 
 
 (bg:(hsl:0,0,0,0.5))[You and your families went to:
+(text-style:&quot;subscript&quot;)[(retrieving 2 archived pictures from fading memory)]
 
 (t8n-depart:&quot;dissolve&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Mall-&gt;mall]] near Kyoto Tower
 
-[[Higashiyama-&gt;higashiyama]] 東山町
+[[Kinkakuji-&gt;Kinkakuji]] 金閣寺
 
-[[Kinkakuji-&gt;Kinkakuji]] 金閣寺]
+[[Higashiyama-&gt;higashiyama]] 東山町]
+
 
 (if: $picture2 is true)[(bg:(hsl:0,0,0,0.5))[&quot;(t8n-depart:&quot;dissolve&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Hey-&gt;reality]], $name! (your peer&#39;s voice pulls you back from memory)] ]</tw-passagedata><tw-passagedata pid="7" name="mall" tags="backc camerab sf camera" position="209.5,688" size="100,100">At the mall, 
 
@@ -194,7 +203,7 @@ you realized your heart is filled with emotions.
 (text-style:&quot;smear&quot;,&quot;buoy&quot;)[&quot;October 26th: the greatest day of mom&#39;s 57th birthday! 
 DON&#39;T FORGET TO (t8n-depart:&quot;dissolve&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[CALL-&gt;cake]] HER AND SEND PRESENTS IN ADVANCE!!&quot;]]
 
-</tw-passagedata><tw-passagedata pid="13" name="cake" tags="phone1 sf" position="62.5,654" size="100,100">&quot;HI MOM...&quot;
+</tw-passagedata><tw-passagedata pid="13" name="cake" tags="phone1 sf" position="23.5,592" size="100,100">&quot;HI MOM...&quot;
 
 (after:2s)[&quot;Oh dear...you finished your stuff? You must be so tired recently&quot;]
 
@@ -205,9 +214,15 @@ sorry for...everything&quot;]
 
 (after:8s)[&quot;Don&#39;t worry dear. We understand. I called you to ask if you&#39;re coming back for winter break. Your father always mumbled: &quot;how&#39;s $name doing? Has $name been eating well and stay healthy in these cold days...&quot;]
 
-(after:14s)[&#39;&#39;(set: $answer to (prompt: &quot;What would you say next&quot;, &quot;&quot;))&#39;&#39;]
+(after:17s)[&#39;&#39;(set: $answer to (prompt: &quot;What would you say next&quot;, &quot;&quot;))&#39;&#39;]
 
-</tw-passagedata></tw-storydata>
+(after:20s)[(text-style:&quot;smear&quot;,&quot;buoy&quot;)[&quot;$name, please remember, 
+we (t8n-depart:&quot;dissolve&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[cherish-&gt;end]] you in every single moment.&quot;]]</tw-passagedata><tw-passagedata pid="14" name="end" tags="sf backc cake" position="81.5,809" size="100,100">(text-style:&quot;smear&quot;,&quot;buoy&quot;)[My dearest friend $name,]
+you have reached the end of the story.
+
+(after:2s)[This story is re-created based on my life experiene to express my love to my famlies. Since we&#39;ve always been physically away from each other, there isn&#39;t a second I had doubt the purest, sincerest and warmest love they have to me. They&#39;ve eternally reserved the softest part of my heart.]
+
+(after:6s)[[[Replay-&gt;Main]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
